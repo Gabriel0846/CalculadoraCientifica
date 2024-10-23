@@ -12,14 +12,17 @@ cor5 = "#ffab40" # laranja
 # janela principal
 janela = Tk()
 janela.title("Calculadora")
-janela.geometry("235x310")
+janela.geometry("235x289")
 janela.config(bg=cor1)
 
 # criando frames
-frame_tela = Frame(janela, width=235, height=50, bg=cor3)
+frame_tela = Frame(janela, width=300, height=56, bg=cor3)
 frame_tela.grid(row=0, column=0)
 
-frame_corpo = Frame(janela, width=235, height=268)
-frame_corpo.grid(row=1, column=0)
+frame_cientifica = Frame(janela, width=300, height=86)
+frame_cientifica.grid(row=1, column=0)
+
+frame_corpo = Frame(janela, width=300, height=340)
+frame_corpo.grid(row=2, column=0)
 
 janela.mainloop()

@@ -31,7 +31,7 @@ frame_corpo.grid(row=2, column=0)
 
 
 # configurando frame tela
-label_tela = Label(janela, width=16, height=2, text='123456789',padx=7, anchor='e', bd=0, justify=RIGHT, font=('Ivy 18'), bg=cor3, fg=cor1)
+label_tela = Label(janela, width=16, height=2, text='123456789',padx=7, anchor='e', bd=0, justify=RIGHT, font=('Ivy 18'), bg=cor3, fg=cor2)
 label_tela.place(x=0, y=0)
 
 janela.mainloop()

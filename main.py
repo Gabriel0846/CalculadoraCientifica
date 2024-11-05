@@ -48,6 +48,12 @@ def calcular():
 
     todos_valores = ''
 
+#funcao limpar tela
+def limpar_tela():
+    global todos_valores
+
+    todos_valores = ''
+    texto.set('')
 
 # fucao para mostrar valores na tela
 def entrar_valores(evento):
@@ -89,7 +95,7 @@ b_2.place(x=118, y=58)
 b_3 = Button(frame_cientifica, command=lambda:entrar_valores(')'), text=')', width=6, height=1,relief=RAISED, overrelief=RIDGE, font=('Ivy 10 bold'), bg=cor1, fg=cor2)
 b_3.place(x=177, y=58)
 
-b_0 = Button(frame_corpo, command=lambda:entrar_valores('C'), text='C', width=14, height=1,relief=RAISED, overrelief=RIDGE, font=('Ivy 10 bold'), bg=cor4, fg=cor2)
+b_0 = Button(frame_corpo, command=limpar_tela, text='C', width=14, height=1,relief=RAISED, overrelief=RIDGE, font=('Ivy 10 bold'), bg=cor4, fg=cor2)
 b_0.place(x=0, y=0)
 b_1 = Button(frame_corpo, command=lambda:entrar_valores('%'), text='%', width=6, height=1,relief=RAISED, overrelief=RIDGE, font=('Ivy 10 bold'), bg=cor4, fg=cor2)
 b_1.place(x=118, y=0)

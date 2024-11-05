@@ -39,6 +39,19 @@ global todos_valores
 todos_valores = ''
 texto = StringVar()
 
+# funcao calcular
+def calcular():
+    global todos_valores
+
+    texto = '2+5-7'
+
+    resultado = eval(texto)
+
+    print(resultado)
+
+calcular()
+
+# fucao para mostrar valores na tela
 def entrar_valores(evento):
     global todos_valores
 

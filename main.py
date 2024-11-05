@@ -33,9 +33,21 @@ frame_cientifica.grid(row=1, column=0)
 frame_corpo = Frame(janela, width=300, height=340)
 frame_corpo.grid(row=2, column=0)
 
+# funcoes
+global todos_valores
+
+todos_valores = ''
+texto = StringVar()
+
+def entrar_valores(evento):
+    global todos_valores
+
+    todos_valores = todos_valores + str(evento)
+    texto.set()
+
 
 # configurando frame tela
-label_tela = Label(frame_tela, text='123456789', width=16, height=2,padx=7, anchor='e', bd=0, justify=RIGHT, font=('Ivy 18'), bg=cor3, fg=cor2)
+label_tela = Label(frame_tela, textvariable=texto, width=16, height=2,padx=7, anchor='e', bd=0, justify=RIGHT, font=('Ivy 18'), bg=cor3, fg=cor2)
 label_tela.place(x=0, y=0)
 
 # configurando flame cientifico

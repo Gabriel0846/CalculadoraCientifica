@@ -43,13 +43,11 @@ texto = StringVar()
 def calcular():
     global todos_valores
 
-    texto = '2+5-7'
+    resultado = str(eval(todos_valores))
+    texto.set(resultado)
 
-    resultado = eval(texto)
+    todos_valores = ''
 
-    print(resultado)
-
-calcular()
 
 # fucao para mostrar valores na tela
 def entrar_valores(evento):
@@ -130,7 +128,7 @@ b_0 = Button(frame_corpo, command=lambda:entrar_valores('0'), text='0', width=14
 b_0.place(x=0, y=116)
 b_1 = Button(frame_corpo, command=lambda:entrar_valores('.'), text='.', width=6, height=1,relief=RAISED, overrelief=RIDGE, font=('Ivy 10 bold'), bg=cor1, fg=cor2)
 b_1.place(x=118, y=116)
-b_3 = Button(frame_corpo, command=lambda:entrar_valores('='), text='=', width=6, height=1,relief=RAISED, overrelief=RIDGE, font=('Ivy 10 bold'), bg=cor4, fg=cor2)
+b_3 = Button(frame_corpo, command=calcular, text='=', width=6, height=1,relief=RAISED, overrelief=RIDGE, font=('Ivy 10 bold'), bg=cor4, fg=cor2)
 b_3.place(x=177, y=116)
 
 
